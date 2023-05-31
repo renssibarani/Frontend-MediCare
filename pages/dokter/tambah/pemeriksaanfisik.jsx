@@ -62,9 +62,6 @@ export default function riwayat() {
   const input_karakter = (e) => {
     set_form({ ...form, karakter: e.target.value });
   };
-  const input_limpa = (e) => {
-    set_form({ ...form, limpinput_limpa: e.target.value });
-  };
   const input_vena = (e) => {
     set_form({ ...form, vena: e.target.value });
   };
@@ -103,6 +100,9 @@ export default function riwayat() {
   };
   const input_hati = (e) => {
     set_form({ ...form, hati: e.target.value });
+  };
+  const input_limpa = (e) => {
+    set_form({ ...form, limpa: e.target.value });
   };
   const input_massa = (e) => {
     set_form({ ...form, massa: e.target.value });

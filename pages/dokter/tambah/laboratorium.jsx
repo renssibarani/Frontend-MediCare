@@ -13,7 +13,7 @@ export default function riwayat() {
     eritrosit: null,
     hematrokit: null,
     trombosit: null,
-    golongan_darah: "A+",
+    golongan_darah: "",
     mcv: null,
     mch: null,
     mchc: null,
@@ -115,14 +115,14 @@ export default function riwayat() {
   const input_ureum_darah = (e) => {
     set_form({ ...form, ureum_darah: e.target.value });
   };
+  const input_kreatinin_darah = (e) => {
+    set_form({ ...form, kreatinin_darah: e.target.value });
+  };
   const input_asam_urat = (e) => {
     set_form({ ...form, asam_urat: e.target.value });
   };
   const input_sgot = (e) => {
     set_form({ ...form, sgot: e.target.value });
-  };
-  const input_kreatinin_darah = (e) => {
-    set_form({ ...form, kreatinin_darah: e.target.value });
   };
   const input_sgpt = (e) => {
     set_form({ ...form, sgpt: e.target.value });
@@ -164,10 +164,10 @@ export default function riwayat() {
     set_form({ ...form, bilirubin: e.target.value });
   };
   const input_urobilin = (e) => {
-    set_form({ ...form, bilirubin: e.target.value });
+    set_form({ ...form, urobilin: e.target.value });
   };
   const input_benda_keton = (e) => {
-    set_form({ ...form, bilirubin: e.target.value });
+    set_form({ ...form, benda_keton: e.target.value });
   };
 
   const next = () => {
@@ -278,13 +278,26 @@ export default function riwayat() {
                 Gologan Darah
               </label>
               <div class="col-8">
-                <input
-                  type="text"
-                  class="form-control"
+                <select
+                  className="form-control"
                   id="inputPassword"
                   value={form.golongan_darah}
                   onChange={input_golongan_darah}
-                />
+                >
+                  <option value="">Pilih Golongan Darah</option>
+                  <option value="A">A</option>
+                  <option value="AB">AB</option>
+                  <option value="B">B</option>
+                  <option value="O">O</option>
+                  <option value="A+">A+</option>
+                  <option value="AB+">AB+</option>
+                  <option value="B+">B+</option>
+                  <option value="O+">O+</option>
+                  <option value="A-">A-</option>
+                  <option value="AB-">AB-</option>
+                  <option value="B-">B-</option>
+                  <option value="O-">O-</option>
+                </select>
               </div>
             </div>
             <div class="mb-3 row">
